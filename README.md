@@ -22,3 +22,10 @@ Our domain of interest is the olympics, we are interested in this domain because
 - 15 features
 - This dataset can answer all data-driven questions listed above.
 ### Olympic Sports and Metals
+- https://www.kaggle.com/the-guardian/olympic-games
+- Data is hosted on Kaggle. Data was collected by The International Olympic Committee’s (IOC) Research and Reference Center. Who is “the world source of reference for Olympic knowledge.” The International Olympic Committee’s Research and Reference Center state “Our mission is to share this knowledge with professionals and researchers through providing information, giving access to our unique collections, enabling research and stimulating intellectual exchange.” The IOC is regarded as having the most accurate data on the Olympics.
+- This data consist of 2 CSV files, one is about the Summer Olympics while the other concerns the Winter Olympics
+- Each File has 9 columns (features).
+- The Winter olympics file has 5770 observations.
+- The Summer olympics file has 31165 observations.
+- From this dataset we can answer all three above questions. 
