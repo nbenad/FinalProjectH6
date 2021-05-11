@@ -16,5 +16,9 @@ Our domain of interest is the olympics, we are interested in this domain because
 ## Finding data
 
 ### 120 Years of Olympic History
-
+- https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results
+- This dataset was collected by Randi Griffin, a data scientist in Cambridge, Massachusetts, through the scraping of data from www.sports-reference.com in May 2018. The data contains information regarding athletes in olympic events dating back 120 years.
+- 271116 rows
+- 15 columns
+- This dataset can answer all data-driven questions listed above.
 ### Olympic Sports and Metals
