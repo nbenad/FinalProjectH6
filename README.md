@@ -4,9 +4,9 @@ Our domain of interest is the olympics, we are interested in this domain because
 
 ### 3 Examples of related projects
 
-- http://rio2016.thegamma.net
-- https://towardsdatascience.com/visual-analysis-of-olympics-data-16273f7c6cf2
-- https://www.dremio.com/the-winter-olympics/
+- [Visualizing Olympic Medalists](http://rio2016.thegamma.net)
+- [Visual Analysis of Olympics Data](https://towardsdatascience.com/visual-analysis-of-olympics-data-16273f7c6cf2)
+- [The Winter Games](https://www.dremio.com/the-winter-olympics/)
 
 ### What Data-Driven Questions do we hope to answer
 - How has the number of metals each country has won changed over time?
