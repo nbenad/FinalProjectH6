@@ -34,11 +34,10 @@ Our domain of interest is the olympics, we are interested in this domain because
 - The Winter olympics file has 5770 observations.
 - The Summer olympics file has 31165 observations.
 - From this dataset we can answer all three above questions. 
-### Olympic Athletes
-- https://www.wisdomaxis.com/technology/software/data/for-reports/olympic-athletes-data-for-reports.php
-- Data is hosted on Wisdom Axis. 
-- This data consist of 2 CSV files, one is about the Summer Olympics while the other concerns the Winter Olympics
-- Each File has 9 columns (features).
-- The Winter olympics file has 5770 observations.
-- The Summer olympics file has 31165 observations.
-- From this dataset we can answer all three above questions. 
+### databaseOlympics
+- https://web.archive.org/web/20070318010246/http://www.databaseolympics.com/index.htm
+- Website dedicated in collecting all sorts of Olympic data from multiple sources. Hosted by Internet Archive, which is a credible internet library stroing archive datasets. This website contains metal counts filtered by athletes, countries, years, and many more.
+- There are multiple tabs with each consisting data of different category(by year 1896 thorugh 2004, by athletes' birthdates, by countries etc.)
+- Each tab has differenct number of columns. The year tabs have 4 columns while the athlete tab has 2 columns.
+- Take the 1908 Summer Olympics tab as example, there are 4 columns and 20 observations.
+- This dataset we was complete enough to answer all three above questions. 
