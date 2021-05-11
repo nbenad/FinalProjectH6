@@ -34,3 +34,11 @@ Our domain of interest is the olympics, we are interested in this domain because
 - The Winter olympics file has 5770 observations.
 - The Summer olympics file has 31165 observations.
 - From this dataset we can answer all three above questions. 
+### Olympic Athletes
+- https://www.wisdomaxis.com/technology/software/data/for-reports/olympic-athletes-data-for-reports.php
+- Data is hosted on Wisdom Axis. 
+- This data consist of 2 CSV files, one is about the Summer Olympics while the other concerns the Winter Olympics
+- Each File has 9 columns (features).
+- The Winter olympics file has 5770 observations.
+- The Summer olympics file has 31165 observations.
+- From this dataset we can answer all three above questions. 
