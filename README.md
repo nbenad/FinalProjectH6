@@ -13,9 +13,11 @@ Our domain of interest is the olympics, we are interested in this domain because
 
 ### What Data-Driven Questions do we hope to answer
 - How has the number of metals each country has won changed over time?
+  - With the overview from [The Winter Games](https://www.dremio.com/the-winter-olympics/), we can easily see the trend of metals won or lost over the years.  
 - What proportion of male winners have won multiple events compares to what proportion of female winners have won multiple events?
+  - []
 - What proportion of gold metal winners, only have won one metal in their career?
-
+  - From [Visualizing Olympic Medalists](http://rio2016.thegamma.net), visualizations of metal count were provided for each athelte and we can locate them with the provided filter functions.
 ## Finding data
 
 ### 120 Years of Olympic History
