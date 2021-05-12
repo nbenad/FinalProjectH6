@@ -13,11 +13,11 @@ Our domain of interest is the olympics, we are interested in this domain because
 
 ### What Data-Driven Questions do we hope to answer
 - How has the number of metals each country has won changed over time?
-  - With the overview from [The Winter Games](https://www.dremio.com/the-winter-olympics/), we can easily see the trend of metals won or lost over the years.  
-- What proportion of male winners have won multiple events compares to what proportion of female winners have won multiple events?
-  - []
+  - We can use the data we have found to graph the number of medals won grouped by country each year. With the overview from [The Winter Games](https://www.dremio.com/the-winter-olympics/), we can easily see the trend of metals won or lost over the years.  
+- What proportion of male winners who have won have won multiple events compared to what proportion of female winners who have won have won multiple events?
+  - To solve this, we can isolate the athletes that have won in at least one event, group them by sex, and then compare the proportion of those who have won multiple unique events to those who have just won one event.
 - What proportion of gold metal winners, only have won one metal in their career?
-  - From [Visualizing Olympic Medalists](http://rio2016.thegamma.net), visualizations of metal count were provided for each athelte and we can locate them with the provided filter functions.
+  - We can isolate the gold medalists in the datasets, then find all the events they've competed in looking for those who have never received another metal, and divide that by the total number of unique gold medalists. From [Visualizing Olympic Medalists](http://rio2016.thegamma.net), visualizations of metal count were provided for each athelte and we can locate them with the provided filter functions.
 ## Finding data
 
 ### 120 Years of Olympic History
