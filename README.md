@@ -4,15 +4,20 @@ Our domain of interest is the olympics, we are interested in this domain because
 
 ### 3 Examples of related projects
 
-- [Visualizing Olympic Medalists](http://rio2016.thegamma.net)
+- [Visualizing Olympic Medalists](http://rio2016.thegamma.net) 
+  - Numbers of interactive visualizations around the Olympic medals data set, including medal timelines and tables.
 - [Visual Analysis of Olympics Data](https://towardsdatascience.com/visual-analysis-of-olympics-data-16273f7c6cf2)
+  - Visual analysis of the economic effect of countries hosting the Olympic via comparison between host's GDP and total medals won.   
 - [The Winter Games](https://www.dremio.com/the-winter-olympics/)
+  - Overview on each country's performace over all Olympic games; data including medals count and categories of sport the country is better at.   
 
 ### What Data-Driven Questions do we hope to answer
 - How has the number of metals each country has won changed over time?
-- What proportion of male winners have won multiple events compares to what proportion of female winners have won multiple events?
+  - We can use the data we have found to graph the number of medals won grouped by country each year. With the overview from [The Winter Games](https://www.dremio.com/the-winter-olympics/), we can easily see the trend of metals won or lost over the years.  
+- What proportion of male winners who have won have won multiple events compared to what proportion of female winners who have won have won multiple events?
+  - To solve this, we can isolate the athletes that have won in at least one event, group them by sex, and then compare the proportion of those who have won multiple unique events to those who have just won one event.
 - What proportion of gold metal winners, only have won one metal in their career?
-
+  - We can isolate the gold medalists in the datasets, then find all the events they've competed in looking for those who have never received another metal, and divide that by the total number of unique gold medalists. From [Visualizing Olympic Medalists](http://rio2016.thegamma.net), visualizations of metal count were provided for each athelte and we can locate them with the provided filter functions.
 ## Finding data
 
 ### 120 Years of Olympic History
@@ -29,3 +34,10 @@ Our domain of interest is the olympics, we are interested in this domain because
 - The Winter olympics file has 5770 observations.
 - The Summer olympics file has 31165 observations.
 - From this dataset we can answer all three above questions. 
+### databaseOlympics
+- https://web.archive.org/web/20070318010246/http://www.databaseolympics.com/index.htm
+- Website dedicated in collecting all sorts of Olympic data from multiple sources. Hosted by Internet Archive, which is a credible internet library stroing archive datasets. This website contains metal counts filtered by athletes, countries, years, and many more.
+- There are multiple tabs with each consisting data of different category(by year 1896 thorugh 2004, by athletes' birthdates, by countries etc.)
+- Each tab has differenct number of columns. The year tabs have 4 columns while the athlete tab has 2 columns.
+- Take the 1908 Summer Olympics tab as example, there are 4 columns and 20 observations.
+- This dataset was complete enough to answer all three above questions. 
