@@ -11,3 +11,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The Heights and Medals of Olympic Athletes chart is intended to show the relationship between the height of an athlete, and wheather or not they earned the Gold, Silver, Bronze, or no medal. The boxplot illistrates that athletes that did medal have very similar height distributions. Athletes that did not medal tend to by slightly shorter than athletes that did medal, and the distribution of athelets that didn't medal is wider than the distributions of athletes that did medal. 
 
+```{r chart1, message=FALSE}
+source("WinPercentageByCountryChart.R")
+athlete_df <- read.csv("data/120 Years of Olympic History/athlete_events.csv")
+regions_df <- read.csv("data/120 Years of Olympic History/noc_regions.csv")
+df <- full_join(athlete_df, regions_df)
+(top_medal_percentages(df))
+```
+
+This chart intends to represent the skill level of each country over time by
+charting the percentage of athletes that medal from each of the top 5 most
+skilled countries. The top 5 most skilled countries were determined by
+calculating the sum of percentages throughout all of Olympic history. While this
+may not be quite as accurate as a mean of percentages, using a sum to get the
+top 5 most skilled countries ensures there is enough data to look at over time.
+It is important to note that the Summer Olympics began in 1896, whereas the
+winter ones only began in 1924. From this data, we can see that Canada, Germany,
+Norway, Russia, and the USA are the top 5 most skilled countries. We can also
+see staggeringly high percentages for the first couple of Olympics. This is most
+likely due to a smaller volume of athletes, hence a larger win percentage. For
+the Summer Olympics, USA seems to be most consistent and has had the largest
+percentage of athletes medal in recent years. In the Winter Olympics, several
+of the countries follow similar trends, with Canada taking the lead in recent
+years, and Russia, Norway, and the USA all competing for second.
