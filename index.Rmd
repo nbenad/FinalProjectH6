@@ -21,5 +21,7 @@ athlete_height(athlete_df)
 The Heights and Medals of Olympic Athletes chart is intended to show the relationship between the height of an athlete, and wheather or not they earned the Gold, Silver, Bronze, or no medal. The boxplot illistrates that athletes that did medal have very similar height distributions. Athletes that did not medal tend to by slightly shorter than athletes that did medal, and the distribution of athelets that didn't medal is wider than the distributions of athletes that did medal. 
 
 ## Chart 2
+The Country Specialization charts are created to give out more specific information on how each country performed rather than the big picture. There are a total of 10 charts each featuring a country with 5 of their best performed sports with specific medal counts. Outside the chart by looking at the total medal counts, we see that United States performed best with the most number of medal counts. However, through the charts, we get interesting information that a majority of the medals won by the U.S came from Athletics, Swimming, and Basketball. This is quite different from how other countries behave, say the Soviet Union and Germany, which won similar amount across their five best performed sports.
+
 
 ## Chart 3
