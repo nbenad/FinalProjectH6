@@ -1,7 +1,7 @@
 ---
-title: "index.Rmd"
-author: "Group H6"
-date: "5/18/2021"
+# title: "index.Rmd"
+# author: "Group H6"
+# date: "5/18/2021"
 output: html_document
 ---
 
@@ -9,5 +9,17 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Relationship Between Olympic Athlete's Heights & Their Success
+``` {r, include = FALSE}
+source("Athleteheightchart.R")
+```
+``` {r, echo = FALSE, warning = FALSE}
+athlete_height(athlete_df)
+```
+
 The Heights and Medals of Olympic Athletes chart is intended to show the relationship between the height of an athlete, and wheather or not they earned the Gold, Silver, Bronze, or no medal. The boxplot illistrates that athletes that did medal have very similar height distributions. Athletes that did not medal tend to by slightly shorter than athletes that did medal, and the distribution of athelets that didn't medal is wider than the distributions of athletes that did medal. 
 
+## Chart 2
+
+## Chart 3

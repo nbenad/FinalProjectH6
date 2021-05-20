@@ -14,4 +14,3 @@ athlete_height <- function(dataset) {
   return(plot)
 }
 
-athlete_height(athlete_df)
