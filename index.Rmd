@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 source("Athleteheightchart.R")
 ```
 ``` {r, echo = FALSE, warning = FALSE}
+athlete_df <- read.csv("Data/120 Years of Olympic History/athlete_events.csv")
 athlete_height(athlete_df)
 ```
 
