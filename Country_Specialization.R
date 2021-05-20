@@ -69,6 +69,7 @@ melt_plot <- function(df) {
   mdf <- melt(df)
   return (ggplot(data = mdf, aes(x = Sport, y = value, fill = variable)) +
     geom_col(position="dodge") +
+    labs(title = paste0("Top 5 best performed sports by ", df$Team[1])) +      
     geom_text(aes(label = value), position = position_dodge(width = 0.9)))
 }
 
