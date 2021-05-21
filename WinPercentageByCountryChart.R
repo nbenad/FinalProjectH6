@@ -1,4 +1,4 @@
-## 
+##
 library(dplyr)
 library(ggplot2)
 
@@ -13,7 +13,8 @@ top_medal_percentages <- function(df) {
     summarise(TotalPct = sum(RegionMedalPct)) %>%
     top_n(5, TotalPct)
   graph_data <- inner_join(medal_percentage_data, top_regions)
-  graph <- ggplot(graph_data, aes(x = Year, y = RegionMedalPct, colour = region)) +
+  graph <- ggplot(graph_data, aes(x = Year,
+                                  y = RegionMedalPct, colour = region)) +
     geom_line(size = 1.5) +
     ylab("Percentage") +
     ggtitle("Percentage of Competing Athletes Who Medaled Grouped By Country") +

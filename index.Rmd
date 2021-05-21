@@ -13,7 +13,6 @@ source("summary.R")
 source("summarytable.R")
 ```
 
-<<<<<<< HEAD
 ## Introduction
 
 For our final project, we have decided to take an interest into and analyze the Olympic Games, both summer and winter. Considering that these events have been occurring for over a century, as well as the fact that everyone in our group enjoys watching the Olympics, this domain was an easy and interesting topic for analysis. In our selected dataset "120 Years of Olympic History", listed are every single athlete that has ever competed in an Olympic event since 1896, and includes their height and weight, their sex, what country they competed for, the events they competed in, and what medal they won, if any. The set additionally contains information about the games themselves, like what city the events were held in, whether they were Summer or Winter Olympics, and the year the Games were held in. 
@@ -28,14 +27,14 @@ For our final project, we have decided to take an interest into and analyze the 
 
 ## Aggregated Table
 
-Below is a table of the top 20 countries all-time in medal counts:
+Below is a table of the top 20 countries all-time in medal counts. The table is organized by country, so that we can compare how many medals each country has won. 
 
 ```{r, echo = F}
 kable(table)
 ```
 
 From this table, we can see that the US is far and away the most dominant country in terms of medals, with a serious gap over the second place, and now collapsed Soviet Union (over doubled the medal count!).
-=======
+
 
 ## Relationship Between Olympic Athlete's Heights & Their Success
 ``` {r, include = FALSE}
@@ -82,4 +81,4 @@ the Summer Olympics, USA seems to be most consistent and has had the largest
 percentage of athletes medal in recent years. In the Winter Olympics, several
 of the countries follow similar trends, with Canada taking the lead in recent
 years, and Russia, Norway, and the USA all competing for second.
->>>>>>> 6f07dd06b756bd6b111db3e3118335b1815262ee
+

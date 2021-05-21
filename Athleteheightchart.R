@@ -13,4 +13,3 @@ athlete_height <- function(dataset) {
     labs(title = "Heights and Medals of Olympic Athletes")
   return(plot)
 }
-
