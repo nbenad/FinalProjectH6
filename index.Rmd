@@ -1,7 +1,7 @@
 ---
-title: "index.Rmd"
-author: "Group H6"
-date: "5/18/2021"
+# title: "index.Rmd"
+# author: "Group H6"
+# date: "5/20/2021"
 output: html_document
 ---
 
@@ -13,6 +13,7 @@ source("summary.R")
 source("summarytable.R")
 ```
 
+<<<<<<< HEAD
 ## Introduction
 
 For our final project, we have decided to take an interest into and analyze the Olympic Games, both summer and winter. Considering that these events have been occurring for over a century, as well as the fact that everyone in our group enjoys watching the Olympics, this domain was an easy and interesting topic for analysis. In our selected dataset "120 Years of Olympic History", listed are every single athlete that has ever competed in an Olympic event since 1896, and includes their height and weight, their sex, what country they competed for, the events they competed in, and what medal they won, if any. The set additionally contains information about the games themselves, like what city the events were held in, whether they were Summer or Winter Olympics, and the year the Games were held in. 
@@ -34,3 +35,51 @@ kable(table)
 ```
 
 From this table, we can see that the US is far and away the most dominant country in terms of medals, with a serious gap over the second place, and now collapsed Soviet Union (over doubled the medal count!).
+=======
+
+## Relationship Between Olympic Athlete's Heights & Their Success
+``` {r, include = FALSE}
+source("Athleteheightchart.R")
+```
+``` {r, echo = FALSE, warning = FALSE}
+athlete_df <- read.csv("Data/120 Years of Olympic History/athlete_events.csv")
+athlete_height(athlete_df)
+```
+
+The Heights and Medals of Olympic Athletes chart is intended to show the relationship between the height of an athlete, and wheather or not they earned the Gold, Silver, Bronze, or no medal. The boxplot illistrates that athletes that did medal have very similar height distributions. Athletes that did not medal tend to by slightly shorter than athletes that did medal, and the distribution of athelets that didn't medal is wider than the distributions of athletes that did medal. 
+
+## The Country Specialization Based on Medal Counts
+``` {r, include = FALSE}
+source("Country_Specialization.R")
+```
+``` {r, echo = FALSE, warning = FALSE}
+plot_list$`United States`
+```
+
+The Country Specialization charts are created to give out more specific information on how each country performed rather than the big picture. There are a total of 10 charts each featuring a country with 5 of their best performed sports with specific medal counts. Outside the chart by looking at the total medal counts, we see that United States performed best with the most number of medal counts. However, through the charts, we get interesting information that a majority of the medals won by the U.S came from Athletics, Swimming, and Basketball. This is quite different from how other countries behave, say the Soviet Union and Germany, which won similar amount across their five best performed sports.
+
+## Relationship Between the Overall Success of a Country and Time
+```{r chart1, message=FALSE, warning = FALSE, echo = FALSE}
+source("WinPercentageByCountryChart.R")
+athlete_df <- read.csv("data/120 Years of Olympic History/athlete_events.csv")
+regions_df <- read.csv("data/120 Years of Olympic History/noc_regions.csv")
+df <- full_join(athlete_df, regions_df)
+(top_medal_percentages(df))
+```
+
+This chart intends to represent the skill level of each country over time by
+charting the percentage of athletes that medal from each of the top 5 most
+skilled countries. The top 5 most skilled countries were determined by
+calculating the sum of percentages throughout all of Olympic history. While this
+may not be quite as accurate as a mean of percentages, using a sum to get the
+top 5 most skilled countries ensures there is enough data to look at over time.
+It is important to note that the Summer Olympics began in 1896, whereas the
+winter ones only began in 1924. From this data, we can see that Canada, Germany,
+Norway, Russia, and the USA are the top 5 most skilled countries. We can also
+see staggeringly high percentages for the first couple of Olympics. This is most
+likely due to a smaller volume of athletes, hence a larger win percentage. For
+the Summer Olympics, USA seems to be most consistent and has had the largest
+percentage of athletes medal in recent years. In the Winter Olympics, several
+of the countries follow similar trends, with Canada taking the lead in recent
+years, and Russia, Norway, and the USA all competing for second.
+>>>>>>> 6f07dd06b756bd6b111db3e3118335b1815262ee
