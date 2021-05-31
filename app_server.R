@@ -2,11 +2,14 @@
 server <- function(input, output) {
   output$boxplot <- renderPlot({
     #  Title  of boxplot
-    title <- paste(input$x_var, "of Olympic", input$y_var, "Athletes")
+    title <- paste("Height of Olympic", input$sport, "Athletes")
     # Boxplot code
     boxplot <- ggplot(data) +
-      geom_boxplot(mapping = aes(x = input$x_var, y = input$y_var))
+      geom_boxplot(mapping = aes(y = input$sport))
     boxplot
   })
 }
+
+# Sports is input with Select Box
+# x_var is height or weight
 

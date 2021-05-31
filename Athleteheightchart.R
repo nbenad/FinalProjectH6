@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(forcats)
 
-athlete_df <- read.csv("Data/120 Years of Olympic History/athlete_events.csv")
+data <- read.csv("Data/120 Years of Olympic History/athlete_events.csv")
 
 athlete_height <- function(dataset) {
   dataset$Medal[is.na(dataset$Medal)] <- "Didn't Medal"
