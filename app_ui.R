@@ -1,17 +1,16 @@
-page_two <- tabPanel(
+page_two <- fluidPage(
   "Heights of Olympic Athletes",
-  fluidPage(
+  sidebarLayout(
     h2("How tall are different sport Athletes"),
     selectInput(inputId = "sport",
                 label = h3("Sport?"),
-                choices = unique(data$Sport)),
+                choices = unique(data$Sport))),
+  mainPanel(
     plotOutput(
-      outputId = boxplot
+      outputId = boxplot)
     )
   )
-)
 
-ui <- navbarPage(
+ui <- navbarPage(title =
   "Olympic Athlete Data",
-  page_two
-)
+  tabPanel("Heights",page_two))
