@@ -14,7 +14,7 @@ Our domain of interest is the olympics, we are interested in this domain because
 ### What Data-Driven Questions do we hope to answer
 - How has the number of metals each country has won changed over time?
   - We can use the data we have found to graph the number of medals won grouped by country each year. With the overview from [The Winter Games](https://www.dremio.com/the-winter-olympics/), we can easily see the trend of metals won or lost over the years.  
-- How to Athletes' heights depend on the sport in which they compete in.
+- How do Athletes' heights depend on the sport in which they compete in? Do Athlete height distributions change depending on sport?
   - To solve this, we can display a boxplot of athlete's height based on the sport they compete in.  
 - What proportion of gold metal winners, only have won one metal in their career?
   - We can isolate the gold medalists in the datasets, then find all the events they've competed in looking for those who have never received another metal, and divide that by the total number of unique gold medalists. From [Visualizing Olympic Medalists](http://rio2016.thegamma.net), visualizations of metal count were provided for each athelte and we can locate them with the provided filter functions.

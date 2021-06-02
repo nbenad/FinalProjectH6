@@ -10,7 +10,7 @@ page_two <- fluidPage(
   heights change as the sport of interest is adjusted. A key take-away is that
   we can see how athletes' heights very with the sport they partake in."),
   mainPanel(
-    plotOutput(
+    plotlyOutput(
       outputId = "boxplot")
     )
   )

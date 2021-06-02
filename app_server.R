@@ -6,7 +6,7 @@ height_data <- data %>%
   na.omit()
 
 server <- function(input, output) {
-  output$boxplot <- renderPlot({
+  output$boxplot <- renderPlotly({
     #  Title  of boxplot
     title <- paste("Height of Olympic", input$sport, "Athletes")
     # Boxplot data
@@ -16,6 +16,9 @@ server <- function(input, output) {
     boxplot <- ggplot(data = boxplot_data) +
       geom_boxplot(mapping = aes(x = Sport, y = Height)) +
       labs(title = "Athlete's Heights", x = "Sport", y = "Height (cm)")
-    boxplot
+    # Make Boxplot interactive with Plotly
+    boxplot_int <- ggplotly(boxplot)
+    # Return interactive graph
+    boxplot_int
   })
 }
