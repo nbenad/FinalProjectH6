@@ -1,4 +1,5 @@
 # Interactive boxplot of height and weight by sport
+data <- read.csv("Data/120 Years of Olympic History/athlete_events.csv")
 height_data <- data %>%
   group_by(Sport) %>%
   summarise(Height) %>%
@@ -13,11 +14,7 @@ server <- function(input, output) {
     # Boxplot code
     boxplot <- ggplot(data = boxplot_data) +
       geom_boxplot(mapping = aes(x = Sport, y = Height)) +
-      labs(x = "Sport", y = "Height (cm)")
+      labs(title = "Athlete's Heights", x = "Sport", y = "Height (cm)")
     boxplot
   })
 }
-
-# Sports is input with Select Box
-# x_var is height or weight
-
