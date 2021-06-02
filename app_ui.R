@@ -7,10 +7,13 @@ page_two <- fluidPage(
                 choices = unique(data$Sport))),
   mainPanel(
     plotOutput(
-      outputId = boxplot)
+      outputId = "boxplot")
     )
   )
 
-ui <- navbarPage(title =
+
+ui <- fluidPage(
+  includeCSS("style.css"),
+  navbarPage(title =
   "Olympic Athlete Data",
-  tabPanel("Heights",page_two))
+  tabPanel("Heights",page_two)))
