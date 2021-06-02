@@ -1,4 +1,13 @@
-#boxplot_header {
-  color: Green;
-  
+#boxplot_header1 {
+  color: yellow;
+  background: blue
+}
+
+#boxplot_header2 {
+  color: green;
+  background: black
+}
+
+#boxplot_header3 {
+  color: red;
 }

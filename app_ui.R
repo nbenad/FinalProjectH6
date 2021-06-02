@@ -1,10 +1,13 @@
 page_two <- fluidPage(
-  "Heights of Olympic Athletes",
+  tags$h1(id = "boxplot_header1","Heights of Olympic Athletes"),
   sidebarLayout(
-    h2("How tall are different sport Athletes"),
+    tags$h2(id = "boxplot_header2","How tall are Athletes based off of their Sport?"),
     selectInput(inputId = "sport",
-                label = h3("Sport?"),
+                label = tags$h3(id = "boxplot_header3","Select sport of intetest"),
                 choices = unique(data$Sport))),
+  p("This Boxplot dispalys the heights of olympic athletes based off of the
+  sport they compete in. Notably we can see how the distribution of athlete's
+  heights change as the sport of interest is adjusted."),
   mainPanel(
     plotOutput(
       outputId = "boxplot")
