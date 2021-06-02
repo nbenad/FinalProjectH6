@@ -7,7 +7,8 @@ page_two <- fluidPage(
                 choices = unique(data$Sport))),
   p("This Boxplot dispalys the heights of olympic athletes based off of the
   sport they compete in. Notably we can see how the distribution of athlete's
-  heights change as the sport of interest is adjusted."),
+  heights change as the sport of interest is adjusted. A key take-away is that
+  we can see how athletes' heights very with the sport they partake in."),
   mainPanel(
     plotOutput(
       outputId = "boxplot")

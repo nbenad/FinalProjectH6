@@ -10,7 +10,8 @@ server <- function(input, output) {
     #  Title  of boxplot
     title <- paste("Height of Olympic", input$sport, "Athletes")
     # Boxplot data
-    boxplot_data <- height_data %>% filter(Sport == input$sport)
+    boxplot_data <- height_data %>%
+      filter(Sport == input$sport)
     # Boxplot code
     boxplot <- ggplot(data = boxplot_data) +
       geom_boxplot(mapping = aes(x = Sport, y = Height)) +
