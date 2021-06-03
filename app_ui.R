@@ -154,8 +154,8 @@ ui <- fluidPage(
   navbarPage(title =
   "Olympic Athlete Data",
   tabPanel("Overview", page_one),
-  tabPanel("Heights", page_two),
-  tabPanel("Countries_Specialization", page_three),
+  tabPanel("Heights of Athletes", page_two),
+  tabPanel("Countries Specialization", page_three),
   tabPanel("Country Win Percentage", page_four),
   tabPanel("Summary", page_five)
   ))
