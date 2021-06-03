@@ -12,8 +12,8 @@ Our domain of interest is the olympics, we are interested in this domain because
   - Overview on each country's performace over all Olympic games; data including medals count and categories of sport the country is better at.   
 
 ### What Data-Driven Questions do we hope to answer
-- How has the number of metals each country has won changed over time?
-  - We can use the data we have found to graph the number of medals won grouped by country each year. With the overview from [The Winter Games](https://www.dremio.com/the-winter-olympics/), we can easily see the trend of metals won or lost over the years.  
+- How do countries do in each sport? What are their specializations?
+  - We can use the data we have found to graph the number of medals won grouped by country and sports. Then, listing out some of the best-performing sports for each country(evaluated by weighting differnt medals).
 - How do Athletes' heights depend on the sport in which they compete in? Do Athlete height distributions change depending on sport?
   - To solve this, we can display a boxplot of athlete's height based on the sport they compete in.  
 - What proportion of gold metal winners, only have won one metal in their career?
