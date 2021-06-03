@@ -1,3 +1,21 @@
+page_one <- fluidPage(
+  tags$h1(id = "title", "Overview and Major Questions:"),
+  HTML('<center><img id = "olympic_img", src = "https://www.desktopbackground.org/download/2520x1080/2010/07/17/49645_logo-olympic-games-sport-wallpapers-hd-free-des_2560x1600_h.jpg"></center>'),
+  tags$p("When working on this project, our group has set out to answer a few 
+        interesting questions about the long and storied history of the worldwide Olympics.
+        Specifically, we have narrowed our focus to two major fields, the athletes themselves
+        and  the countries they were competing for. Here are our major focus points:"),
+  tags$li("How do athletes' heights vary between sports, and how important is it to their success?"),
+  tags$li("In what specific sports has a country performed the best at in its history of competition?"),
+  tags$li("Which countries have historically performed the greatest, and how has it changed over time?"),
+  tags$br(),
+  tags$p("In this project, we hope to uncover interesting and compelling information about the 
+         historic and much-revelled Olympic Games."),
+  HTML('<center> <img id = "gif1", src = "https://i.gifer.com/JOfE.gif"> </center>'),
+  tags$p("Let's take a look!")
+  
+)
+
 page_two <- fluidPage(
   tags$h1(id = "boxplot_header1","Heights of Olympic Athletes"),
   sidebarLayout(
@@ -70,6 +88,7 @@ ui <- fluidPage(
   includeCSS("style.css"),
   navbarPage(title =
   "Olympic Athlete Data",
+  tabPanel("Overview", page_one),
   tabPanel("Heights",page_two),
   tabPanel("Countries_Specialization",page_three),
   tabPanel("Country Win Percentage", page_four)
