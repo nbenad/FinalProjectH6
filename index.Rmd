@@ -65,8 +65,8 @@ The Country Specialization charts are created to give out more specific informat
 ## Relationship Between the Overall Success of a Country and Time
 ```{r chart1, message=FALSE, warning = FALSE, echo = FALSE}
 source("WinPercentageByCountryChart.R")
-athlete_df <- read.csv("data/120 Years of Olympic History/athlete_events.csv")
-regions_df <- read.csv("data/120 Years of Olympic History/noc_regions.csv")
+athlete_df <- read.csv("Data/120 Years of Olympic History/athlete_events.csv")
+regions_df <- read.csv("Data/120 Years of Olympic History/noc_regions.csv")
 df <- full_join(athlete_df, regions_df)
 (top_medal_percentages(df))
 ```

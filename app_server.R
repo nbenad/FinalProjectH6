@@ -1,5 +1,5 @@
 data <- read.csv("Data/120 Years of Olympic History/athlete_events.csv")
-regions_data <- read.csv("data/120 Years of Olympic History/noc_regions.csv")
+regions_data <- read.csv("Data/120 Years of Olympic History/noc_regions.csv")
 
 # Country Chart
 source("Country_Specialization.R")
