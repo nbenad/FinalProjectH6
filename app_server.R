@@ -5,6 +5,10 @@ height_data <- data %>%
   summarise(Height) %>%
   na.omit()
 
+
+# Country Chart
+source("Country_Specialization.R")
+
 server <- function(input, output) {
   output$boxplot <- renderPlotly({
     #  Title  of boxplot
@@ -20,5 +24,9 @@ server <- function(input, output) {
     boxplot_int <- ggplotly(boxplot)
     # Return interactive graph
     boxplot_int
+  })
+  
+  output$country_chart <- renderPlotly({
+    ggplotly(result(input$country))
   })
 }

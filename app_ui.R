@@ -8,16 +8,40 @@ page_two <- fluidPage(
   p("This Boxplot dispalys the heights of olympic athletes based off of the
   sport they compete in. Notably we can see how the distribution of athlete's
   heights change as the sport of interest is adjusted. A key take-away is that
-  we can see how athletes' heights very with the sport they partake in."),
+  we can see how athletes' heights vary with the sport they partake in."),
   mainPanel(
     plotlyOutput(
       outputId = "boxplot")
     )
   )
 
+page_three <- fluidPage(
+  tags$h1(id = "barchart_header1","Countries Specialization"),
+  sidebarLayout(
+    tags$h2(id = "barchart_header2","What are the Best Performed Sports by each Country?"),
+    selectInput(inputId = "country",
+                label = tags$h3(id = "barchart_header3","Select country name"),
+                choices = top_country$Team)),
+  p("The barcharts showing each country's best sports illustrates the respective
+    country's strengths. A total of 40 countries can be selected, and the order
+    from the drop down is sorted by medal counts of all sports won by the respective
+    coutry (gold medals have larger weight in count than sliver and bronze.) The 
+    barchart gives us more detail helping us learn more about the spread of medal 
+    counts for all countries. It's interesting to see that some of the best-performing
+    countries won by completely dominating one sport whereas some less-competetive 
+    countries has an average score across all of its best five sports."),
+  mainPanel(
+    plotlyOutput(
+      outputId = "country_chart")
+  )
+)
+
+
 
 ui <- fluidPage(
   includeCSS("style.css"),
   navbarPage(title =
   "Olympic Athlete Data",
-  tabPanel("Heights",page_two)))
+  tabPanel("Heights",page_two),
+  tabPanel("Countries_Specialization",page_three)
+  ))

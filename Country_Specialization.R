@@ -47,11 +47,11 @@ aggregated_table <- coutries_bronze_count %>%
   replace_na(list(Silver_Count = 0, Gold_Count = 0)) %>%
   mutate(score = Bronze_Count + Silver_Count * 2 + Gold_Count * 3)
 
-top_10_country <- aggregated_table %>%
+top_country <- aggregated_table %>%
   group_by(Team) %>%
   summarize(sum_score = sum(score)) %>%
   arrange(-sum_score) %>%
-  slice_head(n = 10)
+  slice_head(n = 40)
 
 best_sports <- function(cn) {
   return(aggregated_table %>%
@@ -61,31 +61,34 @@ best_sports <- function(cn) {
             slice_head(n = 5))
   }
 
-c_list <- vector(mode = "list", length = 0)
-for (cn in top_10_country$Team) {
-  c_list[[cn]] <- best_sports(cn)
-  }
-
-melt_plot <- function(df) {
-  mdf <- melt(df)
+result <- function(cn) {
+  c_best <- best_sports(cn)
+  mdf <- melt(c_best)
   return(ggplot(data = mdf, aes(x = Sport, y = value, fill = variable)) +
-    geom_col(position = "dodge") +
-    labs(title = paste0("Top 5 best performed sports by ", df$Team[1])) +
-    geom_text(aes(label = value), position = position_dodge(width = 0.9)))
+           geom_col(position = "dodge") +
+           labs(title = paste0("Top 5 best performed sports by ", c_best$Team[1])) +
+           geom_text(aes(label = value), position = position_dodge(width = 0.9)))
 }
 
-plot_list <- vector(mode = "list", length = 0)
-for (cn in top_10_country$Team) {
-  plot_list[[cn]] <- melt_plot(c_list[[cn]])
-}
+# c_list <- vector(mode = "list", length = 0)
+# for (cn in top_country$Team) {
+#   c_list[[cn]] <- best_sports(cn)
+#   }
+# 
+# melt_plot <- function(df) {
+#   mdf <- melt(df)
+#   return(ggplot(data = mdf, aes(x = Sport, y = value, fill = variable)) +
+#     geom_col(position = "dodge") +
+#     labs(title = paste0("Top 5 best performed sports by ", df$Team[1])) +
+#     geom_text(aes(label = value), position = position_dodge(width = 0.9)))
+# }
+# 
+# plot_list <- vector(mode = "list", length = 0)
+# for (cn in top_country$Team) {
+#   plot_list[[cn]] <- melt_plot(c_list[[cn]])
+# }
+# 
+# print(plot_list$`United States`)
+# print(plot_list$`Soviet Union`)
+# print(plot_list$Germany)
 
-print(plot_list$`United States`)
-print(plot_list$`Soviet Union`)
-print(plot_list$Germany)
-print(plot_list$Italy)
-print(plot_list$`Great Britain`)
-print(plot_list$France)
-print(plot_list$Sweden)
-print(plot_list$Canada)
-print(plot_list$Australia)
-print(plot_list$Hungary)
