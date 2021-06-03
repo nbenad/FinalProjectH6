@@ -2,8 +2,9 @@
 library(dplyr)
 library(ggplot2)
 
-top_medal_percentages <- function(df) {
+top_medal_percentages <- function(df, startYear = 1896, endYear = 2016) {
   medal_percentage_data <- df %>%
+    filter(Year >= startYear & Year <= endYear) %>%
     group_by(Year, Season, region, Medal) %>%
     summarise(TempCnt = n()) %>%
     group_by(Year, Season, region) %>%
