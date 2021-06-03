@@ -84,6 +84,30 @@ page_four <- fluidPage(
     Norway, and the USA all competing for second.")
 )
 
+page_five <- fluidPage(
+  tags$h1(id = "summary_title", "Summary and Takeways"),
+  tags$p("Through these analyses, we have examined quite a few trends in the 
+         storied history of the Olympics, both about the countries and their competing
+         athletes. Here are a few major takeaways:"),
+  HTML('<li> As expected, each event has its own <i>"zone"</i> of common heights. Some sports where
+        size is more important, such as <b>Basketball</b>, have a higher distribution of heights, while others 
+        where a smaller size is more beneficial, such as <b>Figure Skating</b>, have lower height distributions. Additionally, 
+       an event like <b>Tug-Of-War</b> where strength is more important than size, a wider distribution os heights is seen</li>'),
+  HTML('<li>We learned that by our metrics of success (highest medal counts), many countries had
+       very different ways to achieve this success. Some succeeded sports by racking up gold medal
+       after gold medal, while others were more consistent and equally placed in gold, silver, and bronze medals. </li>'),
+  HTML('<li>Finally, we saw how the five most successful countries rose and fell in runs of dominance, 
+       and besides the impressive run of <b>Canada</b> early in the Winter Olympics, the modern Olympics have a 
+       healthy amount of competition in terms of placing medals, at least among its winningest countries. </li>'),
+  tags$br(),
+  tags$p("Overall, through data organization and analysis, we learned that the Olympics are a great display of 
+         all forms of athleticism with differing approaches to success, and that they are in a healthy and competitive
+         state in its modern form. Our group was very grateful to have had the opportunity of researching a 
+         topic of shared interest such as the Olympics, and werevery satisfied with the results of our project.")
+  
+  
+)
+
 ui <- fluidPage(
   includeCSS("style.css"),
   navbarPage(title =
@@ -91,5 +115,6 @@ ui <- fluidPage(
   tabPanel("Overview", page_one),
   tabPanel("Heights",page_two),
   tabPanel("Countries_Specialization",page_three),
-  tabPanel("Country Win Percentage", page_four)
+  tabPanel("Country Win Percentage", page_four),
+  tabPanel("Summary", page_five)
   ))
