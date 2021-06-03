@@ -16,8 +16,8 @@ Our domain of interest is the olympics, we are interested in this domain because
   - We can use the data we have found to graph the number of medals won grouped by country and sports. Then, listing out some of the best-performing sports for each country(evaluated by weighting differnt medals).
 - How do Athletes' heights depend on the sport in which they compete in? Do Athlete height distributions change depending on sport?
   - To solve this, we can display a boxplot of athlete's height based on the sport they compete in.  
-- What proportion of gold metal winners, only have won one metal in their career?
-  - We can isolate the gold medalists in the datasets, then find all the events they've competed in looking for those who have never received another metal, and divide that by the total number of unique gold medalists. From [Visualizing Olympic Medalists](http://rio2016.thegamma.net), visualizations of metal count were provided for each athelte and we can locate them with the provided filter functions.
+- How does the percentage of athletes that win from each country change over time?
+  - To answer this question, we can take a look at the number of athletes that won divided by the number of athletes that competed for the most relevant countries and graph the percentages for each olympic event over time to look for a trend.
 ## Finding data
 
 ### 120 Years of Olympic History
