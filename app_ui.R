@@ -82,7 +82,7 @@ page_four <- fluidPage(
   tags$h1("Countries' Medal Percentages"),
   tags$h2("What percentage of competing athletes medaled for each country?"),
   sliderInput("yearSlider", label = h3("Year Range"), min = 1896,
-              max = 2016, value = c(1896, 2016), step = 2),
+              max = 2016, value = c(1896, 2016), step = 2, sep=""),
   plotlyOutput(
     outputId = "linegraph"),
   p("This chart intends to represent the skill level of each country over the
@@ -155,7 +155,7 @@ ui <- fluidPage(
   "Olympic Athlete Data",
   tabPanel("Overview", page_one),
   tabPanel("Heights of Athletes", page_two),
-  tabPanel("Countries Specialization", page_three),
-  tabPanel("Country Win Percentage", page_four),
+  tabPanel("Countries' Specialization", page_three),
+  tabPanel("Country Win Percentages", page_four),
   tabPanel("Summary", page_five)
   ))
